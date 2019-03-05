@@ -14,7 +14,8 @@ public class SQLJava {
                 .appName("sql")
                 .config("spark.master","local")
                 .getOrCreate();
-        Dataset<Row> df1 = spark.read().json("file:///E:/myTest/spark-demo/json.txt");
+//        Dataset<Row> df1 = spark.read().json("file:///E:/myTest/spark-demo/json.txt");
+        Dataset<Row> df1 = spark.read().json("file:///Users/riverfan/mytest/spark/sparkSql/json.txt");
         //创建临时视图
         df1.createOrReplaceTempView("customers");
         df1.show();
